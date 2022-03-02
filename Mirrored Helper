@@ -1,0 +1,21 @@
+#include <linkbot.h>
+
+CLinkbotI robot[2];
+CLinkbotIGroup group;
+group.addRobots(robot);
+
+int radius = 2;
+int trackwidth = 3.69;
+
+group.driveDistance(-7, radius);
+group.move(-337, NaN, 0);
+group.driveDistance(-13, radius);
+group.driveDistance(2, radius);
+group.turnLeft(220, radius, trackwidth);
+group.driveDistance(-12, radius);
+group.turnLeft(110, radius, trackwidth);
+group.driveDistance(-5, radius);
+group.turnLeft(110, radius, trackwidth);
+group.driveDistance(-8, radius);
+group.turnRight(110, radius, trackwidth);
+group.driveDistance(-8.75, radius);
