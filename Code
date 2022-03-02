@@ -1,0 +1,33 @@
+#include <linkbot.h>
+
+CLinkbotI robot1; 
+CLinkbotI robot3;
+
+int radius = 2;
+int x;
+int y; 
+
+printf("Wheres does block start (x-value): ");
+scanf("%i", &y); 
+printf("Where does the block end (x-value): ");
+scanf("%i", &x);
+
+if (x == 18 || x == 28) {
+    robot1.driveDistance(-26, radius); 
+    robot1.turnRight(90, radius, 3.69); 
+    robot1.driveDistance(-14.5, radius); 
+    robot1.driveDistance(6.5, radius); 
+    robot3.driveDistance(-32 + x, radius); 
+    robot3.driveDistance(3, radius);
+}
+
+if (y == 8) {
+    robot3.driveDistance(-26, radius); 
+    robot3.turnRight(90, radius, 3.69); 
+    robot3.driveDistance(-15, radius);
+    robot3.driveDistance(8.5, radius); 
+    robot1.driveDistance(-23, radius); 
+    robot1.driveDistance(3, radius); 
+    
+}
+    
